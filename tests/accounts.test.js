@@ -3,7 +3,7 @@ const {
   findAccountById,
   sortAccountsByLastName,
   numberOfBorrows,
-  booksInPossession,
+  getBooksPossessedByAccount,
 } = require("../public/src/accounts.js");
 
 const accountsFixture = require("./fixtures/accounts.fixture");
@@ -45,11 +45,11 @@ describe("Accounts Page", () => {
     });
   });
 
-  describe("booksInPossession()", () => {
+  describe("getBooksPossessedByAccount()", () => {
     it("should return all of the books taken out by an account with the author embedded", () => {
       const account = accounts[4];
 
-      const actual = booksInPossession(account, books, authors);
+      const actual = getBooksPossessedByAccount(account, books, authors);
       expect(actual.length).to.equal(1);
 
       const book = actual[0];

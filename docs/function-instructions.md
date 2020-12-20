@@ -6,7 +6,7 @@ The following functions can be completed in whichever order you choose. There ar
 
 ### Account functions
 
-![Accounts page for Local Library](./images/accounts.png)
+![image.png](//res.cloudinary.com/strive/image/upload/w_1000,h_1000,c_limit/11c23e4622a87eab216668be31c759ac-image.png)
 
 #### findAccountById()
 
@@ -124,7 +124,7 @@ booksInPossession(account, books, authors);
 
 ### Book functions
 
-![Books page for Local Library](./images/books.png)
+![image.png](//res.cloudinary.com/strive/image/upload/w_1000,h_1000,c_limit/9012c8115fddba330e4958c3a907bcaa-image.png)
 
 #### findAuthorById()
 
@@ -273,7 +273,7 @@ getBorrowersForBook(book, accounts);
 
 ## Home functions
 
-![Home page for Local Library](./images/home.png)
+![image.png](//res.cloudinary.com/strive/image/upload/w_1000,h_1000,c_limit/6e9b6e3b27d21cff7c80cd9efec9c421-image.png)
 
 ### totalBooksCount()
 

@@ -17,6 +17,7 @@ function numberOfBorrows(account, books) {
   return result.length;
 }
 
+
 function booksInPossession(account, books, authors) {
   let booksOut = books.filter((book) => 
   book.borrows.find((borrow) => 
@@ -37,9 +38,10 @@ let result = booksOut.map((book) => {
 return result;
 }
 
+
 module.exports = {
   findAccountById,
   sortAccountsByLastName,
   numberOfBorrows,
-  booksInPossession,
+  getBooksPossessedByAccount,
 };

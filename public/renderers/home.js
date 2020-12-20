@@ -22,8 +22,8 @@ function renderTotalAccounts() {
   span.innerHTML = count;
 }
 
-function renderMostCommonGenres() {
-  const result = mostCommonGenres(books);
+function rendergetMostCommonGenres() {
+  const result = getMostCommonGenres(books);
   if (typeof result !== "object") return;
 
   const lis = result
@@ -36,8 +36,8 @@ function renderMostCommonGenres() {
   ul.innerHTML = lis;
 }
 
-function renderMostPopularBooks() {
-  const result = mostPopularBooks(books);
+function rendergetMostPopularBooks() {
+  const result = getMostPopularBooks(books);
   if (typeof result !== "object") return;
 
   const lis = result
@@ -50,8 +50,8 @@ function renderMostPopularBooks() {
   ul.innerHTML = lis;
 }
 
-function renderMostPopularAuthors() {
-  const result = mostPopularAuthors(books, authors);
+function rendergetMostPopularAuthors() {
+  const result = getMostPopularAuthors(books, authors);
   if (typeof result !== "object") return;
 
   const lis = result
@@ -68,9 +68,9 @@ function render() {
   renderTotalBooks();
   renderBooksBorrowed();
   renderTotalAccounts();
-  renderMostCommonGenres();
-  renderMostPopularBooks();
-  renderMostPopularAuthors();
+  rendergetMostCommonGenres();
+  rendergetMostPopularBooks();
+  rendergetMostPopularAuthors();
 }
 
 document.addEventListener("DOMContentLoaded", render);

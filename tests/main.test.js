@@ -3,9 +3,9 @@ const {
   totalBooksCount,
   totalAccountsCount,
   booksBorrowedCount,
-  mostCommonGenres,
-  mostPopularBooks,
-  mostPopularAuthors,
+  getMostCommonGenres,
+  getMostPopularBooks,
+  getMostPopularAuthors,
 } = require("../public/src/home.js");
 
 const authorsFixture = require("./fixtures/authors.fixture");
@@ -51,9 +51,9 @@ describe("Home Page", () => {
     });
   });
 
-  describe("mostCommonGenres()", () => {
+  describe("getMostCommonGenres()", () => {
     it("should return an ordered list of most common genres", () => {
-      const actual = mostCommonGenres(books);
+      const actual = getMostCommonGenres(books);
       const [first, second] = [
         { name: "Science", count: 3 },
         { name: "Classics", count: 2 },
@@ -63,14 +63,14 @@ describe("Home Page", () => {
     });
 
     it("should limit the list to the top five", () => {
-      const actual = mostCommonGenres(books);
+      const actual = getMostCommonGenres(books);
       expect(actual.length).to.equal(5);
     });
   });
 
-  describe("mostPopularBooks()", () => {
+  describe("getMostPopularBooks()", () => {
     it("should return an ordered list of most popular books", () => {
-      const actual = mostPopularBooks(books);
+      const actual = getMostPopularBooks(books);
       const [first, second] = [
         { name: "sit eiusmod occaecat eu magna", count: 11 },
         { name: "ullamco est minim", count: 5 },
@@ -80,14 +80,14 @@ describe("Home Page", () => {
     });
 
     it("should limit the list to the top five", () => {
-      const actual = mostPopularBooks(books);
+      const actual = getMostPopularBooks(books);
       expect(actual.length).to.equal(5);
     });
   });
 
-  describe("mostPopularAuthors()", () => {
+  describe("getMostPopularAuthors()", () => {
     it("should return an ordered list of most popular authors", () => {
-      const actual = mostPopularAuthors(books, authors);
+      const actual = getMostPopularAuthors(books, authors);
       const [first, second] = [
         { name: "Susanne Lawson", count: 11 },
         { name: "Matthews Sanders", count: 5 },
@@ -97,7 +97,7 @@ describe("Home Page", () => {
     });
 
     it("should limit the list to the top five", () => {
-      const actual = mostPopularAuthors(books, authors);
+      const actual = getMostPopularAuthors(books, authors);
       expect(actual.length).to.equal(5);
     });
   });

@@ -69,7 +69,7 @@ module.exports = {
   totalBooksCount,
   totalAccountsCount,
   booksBorrowedCount,
-  mostCommonGenres,
-  mostPopularBooks,
-  mostPopularAuthors,
+  getMostCommonGenres,
+  getMostPopularBooks,
+  getMostPopularAuthors,
 };

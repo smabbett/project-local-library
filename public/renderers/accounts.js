@@ -36,7 +36,7 @@ function accountDetailsTemplate(account, borrowCount = 0) {
   `;
 }
 
-function booksInPossessionTemplate(books) {
+function getBooksPossessedByAccountTemplate(books) {
   let lis = books
     .map(({ title, author }) => {
       const fullName = `${author.name.first} ${author.name.last}`;
@@ -84,8 +84,8 @@ function renderAccountSelection() {
       const borrowCount = numberOfBorrows(account, books);
       selection.innerHTML = accountDetailsTemplate(account, borrowCount);
 
-      const inPossession = booksInPossession(account, books, authors);
-      selection.innerHTML += booksInPossessionTemplate(inPossession);
+      const inPossession = getBooksPossessedByAccount(account, books, authors);
+      selection.innerHTML += getBooksPossessedByAccountTemplate(inPossession);
     });
   });
 }
