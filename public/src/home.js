@@ -14,7 +14,7 @@ function booksBorrowedCount(books) {
   return result.length;
 }
 
-function mostCommonGenres(books) {
+function getMostCommonGenres(books) {
   const genres = books.reduce((acc, book) => {
     if (!acc[book.genre]) {
       acc[book.genre] = 1;
@@ -32,7 +32,7 @@ function mostCommonGenres(books) {
   return result.slice(0,5);
 }
   
-function mostPopularBooks(books) {
+function getMostPopularBooks(books) {
   let result = books.map((book) => ({
     name: book.title,
     count: book.borrows.length
@@ -41,7 +41,7 @@ function mostPopularBooks(books) {
   return result.slice(0,5);
 }
 
-function mostPopularAuthors(books, authors) {
+function getMostPopularAuthors(books, authors) {
   let result = books.reduce((acc, book) => {
       if (!acc[book.authorId]) {
         acc[book.authorId] = book.borrows.length;

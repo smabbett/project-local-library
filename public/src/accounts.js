@@ -18,7 +18,7 @@ function numberOfBorrows(account, books) {
 }
 
 
-function booksInPossession(account, books, authors) {
+function getBooksPossessedByAccount(account, books, authors) {
   let booksOut = books.filter((book) => 
   book.borrows.find((borrow) => 
   borrow.id === account.id && borrow.returned === false));
@@ -43,5 +43,5 @@ module.exports = {
   findAccountById,
   sortAccountsByLastName,
   numberOfBorrows,
-  getBooksPossessedByAccount,
+  getBooksPossessedByAccount
 };
