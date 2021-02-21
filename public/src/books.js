@@ -38,7 +38,6 @@ function getBorrowersForBook(book, accounts) {
 }
 
 module.exports = {
-  // findAuthorById,
   findBookById,
   partitionBooksByBorrowedStatus,
   getBorrowersForBook,
